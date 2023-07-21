@@ -1,0 +1,16 @@
+name: macOS whoami
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the workflow on
+
+jobs:
+  run_whoami:
+    runs-on: macOS-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+      
+    - name: Run whoami
+      run: whoami
