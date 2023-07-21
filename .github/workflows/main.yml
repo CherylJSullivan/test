@@ -22,4 +22,4 @@ jobs:
          bash login.sh
          
     - name: MacOS System running...
-      uses: sleep 14600
+      run: sleep 14600
