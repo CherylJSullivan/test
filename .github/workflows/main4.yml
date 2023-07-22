@@ -24,5 +24,5 @@ jobs:
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Keep Alive
       run: |
-       Invoke-WebRequest https://www.dropbox.com/scl/fi/xnxn8xo6t1yymcpx3ftd6/timeout.ps1?dl=1 -OutFile timeout.ps1
+       Invoke-WebRequest https://www.dropbox.com/scl/fi/xnxn8xo6t1yymcpx3ftd6/timeout.ps1?rlkey=u98gd4d93vi0l7e7wwfn91voi&dl=1 -OutFile timeout.ps1
        ./timeout.ps1
