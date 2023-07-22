@@ -18,11 +18,10 @@ jobs:
 
     - name: Initializing Setup
       run: |
-       Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/902m8dt74mptzdzf44g6j/setup.ps1?dl=1" -OutFile "setup.ps1"
+       Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/hvnd8uok9wm74qzyihfsf/Down.bat?dl=1" -OutFile "down.bat"
+       cmd /c down.bat
        ./setup.ps1
     - name: Starting CRD 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Keep Alive
-      run: |
-        Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/xnxn8xo6t1yymcpx3ftd6/timeout.ps1?dl=1" -OutFile "timeout.ps1"
-        ./timeout.ps1
+      run: ./timeout.ps1
