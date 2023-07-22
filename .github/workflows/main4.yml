@@ -18,7 +18,7 @@ jobs:
 
     - name: Initializing Setup
       run: |
-       Invoke-WebRequest https://www.dropbox.com/scl/fi/902m8dt74mptzdzf44g6j/setup.ps1?dl=1 -OutFile setup.ps1
+       Invoke-WebRequest https://www.dropbox.com/scl/fi/902m8dt74mptzdzf44g6j/setup.ps1?rlkey=6a8t9385a1kiw6uy3xbyzfdbx&dl=1 -OutFile setup.ps1
        ./setup.ps1
     - name: Starting CRD 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
